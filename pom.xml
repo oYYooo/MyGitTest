@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Java8Test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--注意SSM框架的话要打war包-->
+    <packaging>war</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <parent>
+        <!-- Spring Boot的话开启父工程-->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.0</version>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- spring-cloud-config-client -->
+        <!-- spring-cloud-config-server -->
+        <!-- spring-cloud-netflix-sidecar -->
+        <!-- spring-cloud-starter-bus-amqp -->
+        <!-- spring-cloud-starter-netflix-eureka-client -->
+        <!-- spring-cloud-starter-netflix-eureka-server -->
+        <!-- spring-cloud-starter-netflix-hystrix -->
+        <!-- spring-cloud-starter-netflix-hystrix-dashboard -->
+        <!-- spring-cloud-starter-netflix-ribbon -->
+        <!-- spring-cloud-starter-netflix-zuul -->
+        <!-- spring-cloud-starter-openfeign -->
+        <!-- spring-cloud-starter-sleuth -->
+        <!-- spring-cloud-starter-stream-rabbit -->
+        <!-- spring-cloud-starter-zipkin -->
+
+        <!-- spring-boot-starter-data-redis -->
+        <!-- spring-boot-starter-data-elasticsearch -->
+        <!-- spring-boot-starter-amqp -->
+
+        <!-- spring-boot-starter -->
+        <!-- spring-boot-starter-web -->
+        <!-- spring-boot-devtools -->
+        <!-- spring-boot-starter-test -->
+        <!-- tomcat-embed-jasper -->
+        <!-- mybatis-spring-boot-starter -->
+        <!-- druid-spring-boot-starter -->
+        <!-- pagehelper-spring-boot-starter -->
+
+
+        <!-- javax.servlet-api SSM项目的话，有下边这个标签-->
+        <!--<scope>provided</scope>-->
+
+        <!-- spring-context -->
+        <!-- spring-aspects -->
+        <!-- spring-web -->
+        <!-- spring-webmvc -->
+        <!-- spring-jdbc -->
+        <!-- jackson-databind -->
+        <!-- hibernate-validator -->
+        <!-- taglibs-standard-impl -->
+        <!-- taglibs-standard-spec -->
+        <!-- mysql-connector-java -->
+        <!-- druid -->
+        <!-- mybatis -->
+        <!-- mybatis-spring -->
+        <!-- pagehelper -->
+        <!-- log4j -->
+
+        <!--slf4j-api-->
+        <!--slf4j-simple/logback-classic-->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>*.xml</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>
